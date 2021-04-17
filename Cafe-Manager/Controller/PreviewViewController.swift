@@ -1,5 +1,5 @@
 //
-//  TopTabBarViewController.swift
+//  PreviewViewController.swift
 //  Cafe-Manager
 //
 //  Created by isuru on 4/17/21.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-class TopTabBarViewController: UIViewController {
+class PreviewViewController: UIViewController {
 
-    @IBOutlet weak var tabBar: UITabBarItem!
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

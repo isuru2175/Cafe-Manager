@@ -10,6 +10,13 @@
 		22E32C0780637086CDCEC85C /* Pods_Cafe_ManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2E4AFBF45C1C771DB9B31B /* Pods_Cafe_ManagerTests.framework */; };
 		44AF0FC6AB0B4104899417FC /* Pods_Cafe_Manager_Cafe_ManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B61D003C3237E0FCFD3208A /* Pods_Cafe_Manager_Cafe_ManagerUITests.framework */; };
 		47A192C73A73D45B30C3D4FC /* Pods_Cafe_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B0F6D3EC4DDCC19A689B61 /* Pods_Cafe_Manager.framework */; };
+		D351148E262B53D70009D495 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351148D262B53D70009D495 /* StoreViewController.swift */; };
+		D3511491262B58F70009D495 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351148F262B58F70009D495 /* PreviewViewController.swift */; };
+		D3511492262B58F70009D495 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3511490262B58F70009D495 /* PreviewViewController.xib */; };
+		D35114A1262B674A0009D495 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351149F262B674A0009D495 /* CategoryViewController.swift */; };
+		D35114A2262B674A0009D495 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35114A0262B674A0009D495 /* CategoryViewController.xib */; };
+		D35114A5262B68830009D495 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35114A3262B68830009D495 /* MenuViewController.swift */; };
+		D35114A6262B68830009D495 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35114A4262B68830009D495 /* MenuViewController.xib */; };
 		D354E890262827A100ECC1AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E88F262827A100ECC1AB /* AppDelegate.swift */; };
 		D354E892262827A100ECC1AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E891262827A100ECC1AB /* SceneDelegate.swift */; };
 		D354E894262827A100ECC1AB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354E893262827A100ECC1AB /* LoginController.swift */; };
@@ -21,7 +28,6 @@
 		D35A80BF262AE9D8009176C2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80BE262AE9D8009176C2 /* RegisterViewController.swift */; };
 		D35A80C1262AF402009176C2 /* CheckNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80C0262AF402009176C2 /* CheckNumber.swift */; };
 		D35A80C3262B08F4009176C2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80C2262B08F4009176C2 /* ForgotPasswordViewController.swift */; };
-		D35A80C5262B48E0009176C2 /* TopTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80C4262B48E0009176C2 /* TopTabBarViewController.swift */; };
 		D371B6BA262AB52300F6DCE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D371B6B9262AB52300F6DCE3 /* GoogleService-Info.plist */; };
 		D371B6BD262AD25E00F6DCE3 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371B6BC262AD25E00F6DCE3 /* EmailValidation.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +57,13 @@
 		B7EDFC681057D8CD2C30F414 /* Pods-Cafe-ManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe-ManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-Cafe-ManagerTests/Pods-Cafe-ManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB7B3CF2F4F9B5420D5E6B69 /* Pods-Cafe-Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe-Manager.release.xcconfig"; path = "Target Support Files/Pods-Cafe-Manager/Pods-Cafe-Manager.release.xcconfig"; sourceTree = "<group>"; };
 		BE97321450CFB9633DA74401 /* Pods-Cafe-ManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe-ManagerTests.release.xcconfig"; path = "Target Support Files/Pods-Cafe-ManagerTests/Pods-Cafe-ManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D351148D262B53D70009D495 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		D351148F262B58F70009D495 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		D3511490262B58F70009D495 /* PreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
+		D351149F262B674A0009D495 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = ../Views/CategoryViewController.swift; sourceTree = "<group>"; };
+		D35114A0262B674A0009D495 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		D35114A3262B68830009D495 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D35114A4262B68830009D495 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		D354E88C262827A100ECC1AB /* Cafe-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D354E88F262827A100ECC1AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D354E891262827A100ECC1AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +81,6 @@
 		D35A80BE262AE9D8009176C2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D35A80C0262AF402009176C2 /* CheckNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNumber.swift; sourceTree = "<group>"; };
 		D35A80C2262B08F4009176C2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		D35A80C4262B48E0009176C2 /* TopTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarViewController.swift; sourceTree = "<group>"; };
 		D371B6B9262AB52300F6DCE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D371B6BC262AD25E00F6DCE3 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		D7B0F6D3EC4DDCC19A689B61 /* Pods_Cafe_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafe_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				D354E895262827A100ECC1AB /* Main.storyboard */,
+				D3511490262B58F70009D495 /* PreviewViewController.xib */,
+				D35114A0262B674A0009D495 /* CategoryViewController.xib */,
+				D35114A4262B68830009D495 /* MenuViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,10 +195,13 @@
 		D354E8C02628BC6600ECC1AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D351148F262B58F70009D495 /* PreviewViewController.swift */,
 				D354E893262827A100ECC1AB /* LoginController.swift */,
 				D35A80BE262AE9D8009176C2 /* RegisterViewController.swift */,
 				D35A80C2262B08F4009176C2 /* ForgotPasswordViewController.swift */,
-				D35A80C4262B48E0009176C2 /* TopTabBarViewController.swift */,
+				D351149F262B674A0009D495 /* CategoryViewController.swift */,
+				D35114A3262B68830009D495 /* MenuViewController.swift */,
+				D351148D262B53D70009D495 /* StoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,8 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D354E89C262827A300ECC1AB /* LaunchScreen.storyboard in Resources */,
+				D3511492262B58F70009D495 /* PreviewViewController.xib in Resources */,
+				D35114A2262B674A0009D495 /* CategoryViewController.xib in Resources */,
 				D371B6BA262AB52300F6DCE3 /* GoogleService-Info.plist in Resources */,
 				D354E899262827A300ECC1AB /* Assets.xcassets in Resources */,
+				D35114A6262B68830009D495 /* MenuViewController.xib in Resources */,
 				D354E897262827A100ECC1AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,14 +471,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35114A1262B674A0009D495 /* CategoryViewController.swift in Sources */,
+				D351148E262B53D70009D495 /* StoreViewController.swift in Sources */,
 				D354E894262827A100ECC1AB /* LoginController.swift in Sources */,
 				D35A80C3262B08F4009176C2 /* ForgotPasswordViewController.swift in Sources */,
+				D35114A5262B68830009D495 /* MenuViewController.swift in Sources */,
 				D35A80C1262AF402009176C2 /* CheckNumber.swift in Sources */,
 				D35A80BF262AE9D8009176C2 /* RegisterViewController.swift in Sources */,
 				D354E890262827A100ECC1AB /* AppDelegate.swift in Sources */,
 				D354E892262827A100ECC1AB /* SceneDelegate.swift in Sources */,
-				D35A80C5262B48E0009176C2 /* TopTabBarViewController.swift in Sources */,
 				D371B6BD262AD25E00F6DCE3 /* EmailValidation.swift in Sources */,
+				D3511491262B58F70009D495 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
