@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wiy-4u-tJw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +111,7 @@
                         <outlet property="password" destination="Tow-EL-lof" id="kGA-eg-eDa"/>
                         <segue destination="v0n-nP-sN8" kind="show" identifier="Register" id="2ty-0d-mgr"/>
                         <segue destination="1Xp-Ca-vZj" kind="show" identifier="ForgotPassword" id="RWO-8O-QCg"/>
+                        <segue destination="FIU-81-c2M" kind="show" identifier="Home" id="546-1M-1oM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,7 +121,7 @@
         <!--Forgot Password-->
         <scene sceneID="2Ev-Ea-A69">
             <objects>
-                <viewController id="1Xp-Ca-vZj" sceneMemberID="viewController">
+                <viewController id="1Xp-Ca-vZj" customClass="ForgotPasswordViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOm-Wd-Sb6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,13 +133,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fogotPassword:" destination="Rl4-Gz-C1B" eventType="editingDidEnd" id="4D2-OG-ike"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQI-ni-IFW">
                                         <rect key="frame" x="0.0" y="49" width="374" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Fogot My Password">
+                                        <state key="normal" title="Forgot My Password">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onForgotPassword:" destination="1Xp-Ca-vZj" eventType="touchUpInside" id="EkJ-wV-cTB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -190,15 +197,20 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="zpe-xD-uy4"/>
+                    <connections>
+                        <outlet property="email" destination="Tjd-kq-9R2" id="h9m-zd-dpT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Login1" id="T3x-Xx-bCK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3E-w3-bJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Rl4-Gz-C1B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1800" y="430"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register-->
         <scene sceneID="rAF-4H-wuT">
             <objects>
-                <viewController id="v0n-nP-sN8" customClass="RegisterViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="v0n-nP-sN8" customClass="RegisterViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eD9-zB-hWd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +229,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqY-Ip-9KR">
                                         <rect key="frame" x="0.0" y="49" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                        <connections>
+                                            <action selector="onChangePhoneNo:" destination="v0n-nP-sN8" eventType="editingChanged" id="92i-Gi-coq"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-xN-Sgj">
                                         <rect key="frame" x="0.0" y="98" width="374" height="34"/>
@@ -236,6 +251,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRegister:" destination="v0n-nP-sN8" eventType="touchUpInside" id="7Ti-Sq-8ky"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ors-N0-ia5">
                                         <rect key="frame" x="0.0" y="241" width="374" height="30"/>
@@ -243,6 +261,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLogin:" destination="v0n-nP-sN8" eventType="touchUpInside" id="EZS-jQ-bdB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -290,15 +311,104 @@
                     </view>
                     <navigationItem key="navigationItem" id="ai0-G2-1cq"/>
                     <connections>
+                        <outlet property="confirmPassword" destination="aRE-ln-hAy" id="ESI-OE-zTP"/>
                         <outlet property="email" destination="rTX-lt-aje" id="Qeq-ek-O1G"/>
                         <outlet property="password" destination="qcs-xN-Sgj" id="75Y-kx-UJU"/>
                         <outlet property="phoneNumber" destination="XqY-Ip-9KR" id="xz2-ie-VAd"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="Login" id="vb7-wP-irT"/>
+                        <segue destination="FIU-81-c2M" kind="show" identifier="Home" id="hDU-dU-Lda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbt-u3-Ikc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800" y="-277"/>
+        </scene>
+        <!--ORDER-->
+        <scene sceneID="YME-sc-QJj">
+            <objects>
+                <viewController id="O0H-qm-nqF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhc-8q-Dfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="item 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtk-W9-2YO">
+                                <rect key="frame" x="236" y="382" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CHB-EG-Wue"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ORDER" id="n43-84-AUu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQg-HQ-eU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4983" y="1147"/>
+        </scene>
+        <!--ACCOUNT-->
+        <scene sceneID="YCf-KI-JIa">
+            <objects>
+                <viewController id="BsR-H2-P4S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irm-3k-gVo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WRa-ZQ-wHf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ACCOUNT" id="ND4-bP-005"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7Q-I5-PEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6871.0144927536239" y="507.58928571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Hdz-Ro-ozB">
+            <objects>
+                <tabBarController id="FIU-81-c2M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sme-Xp-ayN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rql-7L-600">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V9o-fu-8po" kind="relationship" relationship="viewControllers" id="qEK-TP-fFp"/>
+                        <segue destination="O0H-qm-nqF" kind="relationship" relationship="viewControllers" id="k05-Lc-aCd"/>
+                        <segue destination="BsR-H2-P4S" kind="relationship" relationship="viewControllers" id="KsM-cs-ZoZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eO-IZ-TjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277" y="179"/>
+        </scene>
+        <!--STORE-->
+        <scene sceneID="Pb3-yM-HF9">
+            <objects>
+                <viewController id="V9o-fu-8po" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3JB-8D-Sh9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-nG-EIi">
+                                <rect key="frame" x="142" y="44" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qmY-yi-qfb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="STORE" id="hzK-Ko-o3O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Pv-97-RCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5022" y="-135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZNs-eI-mvw">
@@ -320,7 +430,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vb7-wP-irT"/>
+        <segue reference="hDU-dU-Lda"/>
+        <segue reference="T3x-Xx-bCK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-kitchen-room-96" width="128" height="128"/>
