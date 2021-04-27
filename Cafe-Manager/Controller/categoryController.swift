@@ -85,7 +85,6 @@ class categoryController: UIViewController,UITableViewDelegate,UITableViewDataSo
        }
     private func makeDeleteContextualAction(forRowAt indexPath: IndexPath) -> UIContextualAction {
         return UIContextualAction(style: .destructive, title: "Delete") { (action, swipeButtonView, completion) in
-            print("DELETE HERE")
             let path = self.categories[indexPath.row].id
             self.ref.observeSingleEvent(of: .value, with: { (snapshot) in
                    self.ref.child("Category").child(path).child("isDelete").setValue("1")

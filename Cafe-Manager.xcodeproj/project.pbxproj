@@ -26,6 +26,7 @@
 		D35A80BF262AE9D8009176C2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80BE262AE9D8009176C2 /* RegisterViewController.swift */; };
 		D35A80C1262AF402009176C2 /* CheckNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80C0262AF402009176C2 /* CheckNumber.swift */; };
 		D35A80C3262B08F4009176C2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A80C2262B08F4009176C2 /* ForgotPasswordViewController.swift */; };
+		D35A835D26387F7600AC31F6 /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35A835C26387F7600AC31F6 /* addItemViewController.swift */; };
 		D35E0E6F262C1FC000C91588 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35E0E6E262C1FC000C91588 /* CategoryView.swift */; };
 		D35E0E73262C3C3500C91588 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35E0E72262C3C3500C91588 /* Category.swift */; };
 		D3704C8E26380B9900DC55C8 /* categoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3704C8D26380B9900DC55C8 /* categoryController.swift */; };
@@ -81,6 +82,7 @@
 		D35A80BE262AE9D8009176C2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D35A80C0262AF402009176C2 /* CheckNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNumber.swift; sourceTree = "<group>"; };
 		D35A80C2262B08F4009176C2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		D35A835C26387F7600AC31F6 /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		D35E0E6E262C1FC000C91588 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		D35E0E72262C3C3500C91588 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D3704C8D26380B9900DC55C8 /* categoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				D351148D262B53D70009D495 /* StoreViewController.swift */,
 				D3704C8D26380B9900DC55C8 /* categoryController.swift */,
 				D3704C912638152D00DC55C8 /* categoryTableControllerTableViewCell.swift */,
+				D35A835C26387F7600AC31F6 /* addItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35114A1262B674A0009D495 /* CategoryViewController.swift in Sources */,
+				D35A835D26387F7600AC31F6 /* addItemViewController.swift in Sources */,
 				D351148E262B53D70009D495 /* StoreViewController.swift in Sources */,
 				D35E0E6F262C1FC000C91588 /* CategoryView.swift in Sources */,
 				D354E894262827A100ECC1AB /* LoginController.swift in Sources */,
