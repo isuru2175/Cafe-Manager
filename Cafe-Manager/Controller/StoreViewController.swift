@@ -15,29 +15,41 @@ class StoreViewController: UIViewController {
     var simpleView1:UIView!
     var simpleView2:UIView!
     var simpleView3:UIView!
+    
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secoundView: UIView!
+    @IBOutlet weak var thirdView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        simpleView1 = PreviewViewController().view
-        simpleView2 = CategoryViewController().view
-        simpleView3 = MenuViewController().view
-        mainView.self.addSubview(simpleView3)
-        mainView.self.addSubview(simpleView2)
-        mainView.self.addSubview(simpleView1)
-       
+//        simpleView1 = PreviewViewController().view
+//        simpleView2 = CategoryViewController().view
+//        simpleView3 = MenuViewController().view
+//        mainView.self.addSubview(simpleView3)
+//        mainView.self.addSubview(simpleView2)
+//        mainView.self.addSubview(simpleView1)
+       firstView.alpha=1
 //        simpleView2 = CategoryViewController().view
         // Do any additional setup after loading the view.
     }
     
     @IBAction func switchViewAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0:
-            mainView.bringSubviewToFront(simpleView1)
-            break
+        
             case 1:
-                       mainView.bringSubviewToFront(simpleView2)
+                      firstView.alpha=0
+                       secoundView.alpha=1
+                       thirdView.alpha=0
             break
             case 2:
-                       mainView.bringSubviewToFront(simpleView3)
+                      firstView.alpha=1
+                       secoundView.alpha=0
+                       thirdView.alpha=0
+            break
+            case 0:
+            firstView.alpha=0
+            secoundView.alpha=0
+            thirdView.alpha=1
             break
         default:
             break
