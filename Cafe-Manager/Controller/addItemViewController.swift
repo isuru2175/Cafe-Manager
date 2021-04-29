@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 class CellClass: UITableViewCell {
     
 }
@@ -15,12 +17,21 @@ class addItemViewController: UIViewController,UITableViewDelegate,UITableViewDat
    
     
 
+    @IBOutlet weak var itemName: UITextField!
+    @IBOutlet weak var descriptions: UITextField!
+    @IBOutlet weak var price: UITextField!
+    @IBOutlet weak var discount: UITextField!
+    @IBOutlet weak var isSell: UIButton!
+    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var image: UIButton!
     @IBOutlet weak var categoryList: UIButton!
     let transparentView = UIView()
     let tableView = UITableView()
     var selectedButton = UIButton()
+    var sell=0
     var dataSource :[Category] = []
     var ref: DatabaseReference!
+    var storageRef = Storage.storage()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -48,14 +59,76 @@ class addItemViewController: UIViewController,UITableViewDelegate,UITableViewDat
                                })
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func imageUploader(_ sender: Any) {
+       let picker = UIImagePickerController()
+         picker.sourceType = .photoLibrary
+         picker.delegate = self
+         picker.allowsEditing = true
+        present(picker, animated: true)
+
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+          picker.dismiss(animated: true, completion: nil)
+          
+          guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+              return
+          }
+          guard let imagedata = image.pngData() else {
+              return
+          }
+       
+          
+              
+          self.myImage.image = UIImage(data: imagedata)
+        
+          
+          
+          
+                  
+              
+          }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onCheck(_ sender: UIButton) {
         if sender.isSelected{
             sender.isSelected = false
+            sell=0
         }
         else
         {
             sender.isSelected = true
+            sell=1
         }
+    }
+    @IBAction func btnSave(_ sender: UIButton) {
+        let ref = Database.database().reference()
+                let key = ref.child("Item").childByAutoId().key!
+               let name=itemName.text!
+        let des=descriptions.text!
+        let pri=Float(price.text!)
+        let dis=Int(discount.text!)
+        let cat=categoryList.titleLabel!.text
+        
+        let storage = Storage.storage().reference()
+        
+//        let path:String = "foodimages/" + ref2.documentID + ".png"
+        
+        storage.child("FoodImage").putData((self.myImage.image?.pngData())!, metadata: nil) { (_, Error) in
+            if Error != nil
+            {
+                print("erro")
+            }
+            else
+            {
+                
+                
+            }
+        }
+        
+                                      ref.child("Item/"+key).setValue(["id":key,
+                                                                       "Name":name,"Description":des,"Price":pri,"image":"test.jpg","Discount":dis,"Category":cat,"isSell":sell])
     }
     func addTransparentView(frames: CGRect) {
         let window = UIApplication.shared.keyWindow
@@ -126,6 +199,30 @@ class addItemViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     */
 
+}
+extension addItemViewController:UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        let selectedImage : UIImage = image
+        // 1 Media Data in memory
+        let data = Data()
+
+        // 2 Create a reference to the file you want to upload
+        let riversRef = storageRef.reference(withPath: "items/")
+
+        // 3 Upload the file to the path "images/rivers.jpg"
+        let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
+          if let error = error {
+            // 4 Uh-oh, an error occurred!
+            return
+          }
+
+          // 5
+//          reference.downloadURL(completion: { (url, error) in
+//            if let error = error { return }
+//            // 6
+//          })
+        }
+    }
 }
 //extension ViewController:UITableViewDelegate,UITableViewDataSource {
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -11,7 +11,7 @@ import Firebase
 class categoryController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     
-
+//let db = Firestore.firestore()
     @IBOutlet weak var categoryTable: UITableView!
     @IBOutlet weak var categoryName: UITextField!
     var categories :[Category] = []
